@@ -46,7 +46,7 @@ namespace WebApplication.Tests.Controllers
             Assert.IsNotNull(result);
         }
 
-        [Test(Author = "Jevgeni", Description = "This is a test", TestOf = typeof(HomeController))]
+        [Test(Description = "This is a test")]
         public void Fail()
         {
             Assert.Fail("This must fail");
