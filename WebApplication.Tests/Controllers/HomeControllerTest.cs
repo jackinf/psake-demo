@@ -1,18 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Web.Mvc;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using WebApplication;
+﻿using System.Web.Mvc;
 using WebApplication.Controllers;
+using NUnit.Framework;
 
 namespace WebApplication.Tests.Controllers
 {
-    [TestClass]
+    [TestFixture]
     public class HomeControllerTest
     {
-        [TestMethod]
+        [Test]
         public void Index()
         {
             // Arrange
@@ -25,7 +20,7 @@ namespace WebApplication.Tests.Controllers
             Assert.IsNotNull(result);
         }
 
-        [TestMethod]
+        [Test]
         public void About()
         {
             // Arrange
@@ -38,7 +33,7 @@ namespace WebApplication.Tests.Controllers
             Assert.AreEqual("Your application description page.", result.ViewBag.Message);
         }
 
-        [TestMethod]
+        [Test]
         public void Contact()
         {
             // Arrange
@@ -49,6 +44,12 @@ namespace WebApplication.Tests.Controllers
 
             // Assert
             Assert.IsNotNull(result);
+        }
+
+        [Test(Author = "Jevgeni", Description = "This is a test", TestOf = typeof(HomeController))]
+        public void Fail()
+        {
+            Assert.Fail("This must fail");
         }
     }
 }

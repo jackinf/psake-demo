@@ -1,0 +1,14 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <NUnitPorjectOutputDirectory>
+            $(Outdir)_PublishedNUnitTests\$(MSBuildProjectName)
+        </NUnitPorjectOutputDirectory>
+    </PropertyGroup>
+
+  <PropertyGroup>
+    <PrepareForRunDependsOn>
+      $(PrepareForRunDependsOn);
+      _CopyNUnitTests
+    </PrepareForRunDependsOn>
+  </PropertyGroup>
+</Project>
