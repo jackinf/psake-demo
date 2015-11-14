@@ -46,10 +46,10 @@ namespace WebApplication.Tests.Controllers
             Assert.IsNotNull(result);
         }
 
-        [Test(Description = "This is a test")]
-        public void Fail()
-        {
-            Assert.Fail("This must fail");
-        }
+        //[Test(Description = "This is a test")]
+        //public void Fail()
+        //{
+        //    Assert.Fail("This must fail");
+        //}
     }
 }
